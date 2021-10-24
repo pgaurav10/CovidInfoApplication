@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".CountryActivity">
+
+    <EditText
+        android:id="@+id/searchBar"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:imeOptions="actionSearch"
+        android:hint="Search Here"
+        android:maxLines="1"
+        android:drawableLeft="@drawable/ic_search"
+        android:drawablePadding="4dp"
+        android:layout_margin="10dp"
+        android:background="@drawable/search_back"
+        />
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="12dp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentStart="true"
+            android:layout_marginLeft="12dp"
+            android:text="Country Name"
+            android:layout_alignParentLeft="true"
+            android:textColor="@color/black"
+            android:textSize="@dimen/text_size"
+            android:fontFamily="@string/regular"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:layout_marginRight="12dp"
+            android:text="Total Cases"
+            android:layout_alignParentRight="true"
+            android:textColor="@color/black"
+            android:textSize="@dimen/text_size"
+            android:fontFamily="@string/regular"/>
+    </RelativeLayout>
+    <androidx.recyclerview.widget.RecyclerView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/countries"
+        tools:listitem="@layout/country_item_layout"/>
+
+</LinearLayout>
